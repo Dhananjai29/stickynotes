@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap');  
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap');  
+div{
+    margin: 20px auto;
+    width: 80%;
+    font-family: "lato";
+    padding: 5px;
+    background: linear-gradient(to right, #333333, #8b8585);
+    color: #fff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+h4{
+    font-weight: bold;
+    font-size: 2rem;
+}
+p{
+    font-family: "Reenie Beanie";
+    font-size: 1.5rem;
+}
+ul, li{
+    list-style:none;
+}
+ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+ul li a
+{
+    text-decoration: none;
+    color:#000;
+    background: #ffc;
+    display: block;
+    height: 10em;
+    width: 10em;
+    padding: 1em;
+    box-shadow: 5px 5px 7px rgba(33, 33,33, 0.7);
+    transition: transform .15s linear;
+}
+ul li{
+    margin: 1em;
+}
+ul li:nth-child(odd) a
+{
+  transform: rotate(-4deg);
+  position: relative;
+  top:5px;
+
+}
+ul li:nth-child(even) a
+{
+  transform: rotate(4deg);
+  position: relative;
+  top:5px;
+
+}
+ul li:nth-child(3n) a
+{
+  transform: rotate(-3deg);
+  position: relative;
+  top:-5px;
+
+}
+ul li:nth-child(5n) a
+{
+  transform: rotate(5deg);
+  position: relative;
+  top:-10px;
+
+}
+
+ul li a:hover, ul li a:focus
+{
+    box-shadow: 10px 10px 7px rgba(0, 0, 0, .7);
+    transform: scale(1.25);
+    position: relative;
+    z-index: 5;
+}
+ul li:nth-child(even) a
+{
+  position: relative;
+  top: 5px;
+  background: rgb(255, 205, 23);
+}
+ul li:nth-child(3n) a
+{
+  position: relative;
+  top:-5px;
+  background: rgb(17, 78, 75);
+}
+
+:root{
+	--axis-x:1px;
+	--axis-y:1rem;
+	--delay: 10;
+	--color-black:#000;
+	--color-white:#fff;
+	--color-orange:#D49C3D;
+	--color-red:#D14B3D;
+	--color-violet:#CF52EB;
+	--color-blue:#44A3F7;
+	--color-green:#5ACB3C;
+	--color-yellow:#DEBF40;
+	--color-foreground: var(--color-white);
+	--font-name:Rightenous;
+}
+body{
+	background: linear-gradient(to right, #0e0e0e, #333333);
+}
+.head{
+  background: none;
+}
+.c-rainbow{
+	counter-reset: rainbow;
+	position:relative;
+	list-style:none;
+  width: 100%;
+  display: block;
+  font-family: Monotype Corsiva;
+}
+.c-rainbow__layer{
+	counter-increment:rainbow;
+	font-size:7rem;
+  margin: 0; 
+
+	color:var(--text-color);
+	text-shadow:-1px -1px 5px var(--color-black),
+              1px -1px 5px var(--color-black),		
+              -1px 1px 5px var(--color-black),
+              1px 1px 5px var(--color-black),
+              4px 4px 5px rgba(0,0,0,0.2);
+	animation: rainbow 1.5s ease-in-out infinite;			
+}
+.c-rainbow__layer:nth-child(1){
+	animation-delay: calc(1/var(--delay)*1s);
+	left:calc(var(--axis-x)*1); 
+	z-index: -10;
+}
+.c-rainbow__layer:nth-child(2){
+	animation-delay: calc(2/var(--delay)*1s);
+	left:calc(var(--axis-x)*2); 
+	z-index: -20;
+}.c-rainbow__layer:nth-child(3){
+	animation-delay: calc(3/var(--delay)*1s);
+	left:calc(var(--axis-x)*3); 
+	z-index: -30;
+}.c-rainbow__layer:nth-child(4){
+	animation-delay: calc(4/var(--delay)*1s);
+	left:calc(var(--axis-x)*4); 
+	z-index: -40;
+}.c-rainbow__layer:nth-child(5){
+	animation-delay: calc(5/var(--delay)*1s);
+	left:calc(var(--axis-x)*5); 
+	z-index: -50;
+}.c-rainbow__layer:nth-child(6){
+	animation-delay: calc(6/var(--delay)*1s);
+	left:calc(var(--axis-x)*6); 
+	z-index: -60;
+}
+.c-rainbow__layer:nth-child(7){
+	animation-delay: calc(7/var(--delay)*1s);
+	left:calc(var(--axis-x)*7); 
+	z-index: -70;
+}
+.c-rainbow__layer:not(:first-child){
+	position:absolute;
+	top:0;
+}
+.c-rainbow__layer--white{
+	--text-color:var(--color-white);
+}
+.c-rainbow__layer--orange{
+	--text-color:var(--color-orange);
+}
+.c-rainbow__layer--red{
+	--text-color:var(--color-red);
+}
+.c-rainbow__layer--violet{
+	--text-color:var(--color-violet);
+}
+.c-rainbow__layer--blue{
+	--text-color:var(--color-blue);
+}
+.c-rainbow__layer--green{
+	--text-color:var(--color-green);
+}
+.c-rainbow__layer--yellow{
+	--text-color:var(--color-yellow);
+}
+@keyframes rainbow{
+	0%,100%{
+		transform: translatey(var(--axis-y));
+	}
+	50%{
+		transform: translatey(clac(var(--axis-y)*-1));
+	}
+}
+
+
+
+
+ 
